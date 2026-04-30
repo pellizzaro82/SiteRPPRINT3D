@@ -97,9 +97,8 @@ if (quoteForm) {
     e.preventDefault();
     const name = document.getElementById("quoteName").value.trim();
     const type = document.getElementById("quoteType").value || "nao informado";
-    const qty = document.getElementById("quoteQty").value || "nao informado";
-    const deadline = document.getElementById("quoteDeadline").value.trim() || "nao informado";
-    const msg = `Ola! Meu nome e ${name}.\nGostaria de um orcamento:\n- Peca: ${type}\n- Quantidade: ${qty}\n- Prazo: ${deadline}`;
+    const desc = document.getElementById("quoteDesc").value.trim() || "nao informado";
+    const msg = `Ola! Meu nome e ${name}.\nGostaria de um orcamento:\n- Peca: ${type}\n- Descricao: ${desc}`;
     window.open(`https://wa.me/5511964532979?text=${encodeURIComponent(msg)}`, "_blank");
   });
 }
