@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pellizzaro82.github.io/SiteRPPRINT3D/sitemap.xml
+Sitemap: https://rpprint3d.com.br/sitemap.xml
