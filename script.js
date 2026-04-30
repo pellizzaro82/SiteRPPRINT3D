@@ -11,6 +11,7 @@ if (menuBtn && navMenu) {
   });
 }
 
+// Reveal on scroll
 const revealElements = document.querySelectorAll(".reveal");
 
 const revealObserver = new IntersectionObserver(
@@ -22,11 +23,12 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.14 }
+  { threshold: 0.1 }
 );
 
-revealElements.forEach((element) => revealObserver.observe(element));
+revealElements.forEach((el) => revealObserver.observe(el));
 
+// Hero slideshow
 const heroSlideImage = document.getElementById("heroSlideImage");
 
 if (heroSlideImage) {
@@ -48,4 +50,83 @@ if (heroSlideImage) {
       heroSlideImage.classList.remove("is-fading");
     }, 220);
   }, 3200);
+}
+
+// Parallax hero
+const heroMedia = document.querySelector(".hero-media");
+if (heroMedia) {
+  window.addEventListener("scroll", () => {
+    heroMedia.style.transform = `translateY(${window.scrollY * 0.08}px)`;
+  }, { passive: true });
+}
+
+// Animated counters
+const counters = document.querySelectorAll(".counter");
+
+if (counters.length) {
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.target, 10);
+      const steps = 60;
+      const increment = target / steps;
+      let current = 0;
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        el.textContent = Math.floor(current);
+      }, 1600 / steps);
+
+      counterObserver.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach((c) => counterObserver.observe(c));
+}
+
+// Formulario orcamento -> WhatsApp
+const quoteForm = document.getElementById("quoteForm");
+
+if (quoteForm) {
+  quoteForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.getElementById("quoteName").value.trim();
+    const type = document.getElementById("quoteType").value || "nao informado";
+    const qty = document.getElementById("quoteQty").value || "nao informado";
+    const deadline = document.getElementById("quoteDeadline").value.trim() || "nao informado";
+    const msg = `Ola! Meu nome e ${name}.\nGostaria de um orcamento:\n- Peca: ${type}\n- Quantidade: ${qty}\n- Prazo: ${deadline}`;
+    window.open(`https://wa.me/5511964532979?text=${encodeURIComponent(msg)}`, "_blank");
+  });
+}
+
+// Lightbox galeria
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxClose = document.getElementById("lightboxClose");
+
+if (lightbox && lightboxImg && lightboxClose) {
+  document.querySelectorAll(".mosaic-strip img").forEach((img) => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add("is-open");
+    });
+  });
+
+  const closeLightbox = () => lightbox.classList.remove("is-open");
+
+  lightboxClose.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+  });
 }

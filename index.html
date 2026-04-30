@@ -8,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Open Graph -->
+  <meta property="og:title" content="RPPRINT3D | Impressao 3D Profissional">
+  <meta property="og:description" content="Impressao 3D profissional para prototipos, reposicao, decoracao e projetos sob medida.">
+  <meta property="og:image" content="https://i.pinimg.com/736x/ea/80/e9/ea80e91f7a035674204eea4738184180.jpg">
+  <meta property="og:url" content="https://pellizzaro82.github.io/SiteRPPRINT3D/">
+  <meta property="og:type" content="website">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Logo RPPRINT 3d.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,8 +29,10 @@
     <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">Menu</button>
     <nav class="nav" id="navMenu">
       <a href="#servicos">Servicos</a>
-      <a href="#processo">Processo</a>
+      <a href="#materiais">Materiais</a>
       <a href="#portfolio">Portfolio</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#faq">FAQ</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
@@ -49,6 +59,25 @@
         >
       </figure>
     </section>
+
+    <div class="stats-strip reveal">
+      <div class="stat-item">
+        <div><strong class="counter" data-target="500">0</strong><span>+</span></div>
+        <p>Pecas entregues</p>
+      </div>
+      <div class="stat-item">
+        <div><strong class="counter" data-target="98">0</strong><span>%</span></div>
+        <p>Clientes satisfeitos</p>
+      </div>
+      <div class="stat-item">
+        <div><strong class="counter" data-target="3">0</strong><span> dias</span></div>
+        <p>Prazo medio</p>
+      </div>
+      <div class="stat-item">
+        <div><strong class="counter" data-target="12">0</strong><span>+</span></div>
+        <p>Materiais disponiveis</p>
+      </div>
+    </div>
 
     <section class="section reveal" id="servicos">
       <div class="section-head">
@@ -83,6 +112,55 @@
       </div>
     </section>
 
+    <section class="section reveal" id="materiais">
+      <div class="section-head">
+        <p class="eyebrow">Com o que trabalhamos</p>
+        <h2>Materiais para cada necessidade.</h2>
+      </div>
+      <div class="mat-grid">
+        <div class="mat-card">
+          <span class="mat-badge">PLA</span>
+          <h3>PLA</h3>
+          <p>O mais popular. Facil de imprimir, biodegradavel e ideal para decoracao, brindes e prototipos visuais.</p>
+          <ul>
+            <li>Facil de imprimir</li>
+            <li>Biodegradavel</li>
+            <li>Boa rigidez</li>
+          </ul>
+        </div>
+        <div class="mat-card">
+          <span class="mat-badge">ABS</span>
+          <h3>ABS</h3>
+          <p>Alta resistencia mecanica e termica. Indicado para pecas tecnicas que sofrem impacto ou calor.</p>
+          <ul>
+            <li>Alta resistencia</li>
+            <li>Suporta calor</li>
+            <li>Acabamento liso</li>
+          </ul>
+        </div>
+        <div class="mat-card">
+          <span class="mat-badge">PETG</span>
+          <h3>PETG</h3>
+          <p>Resistente a impactos e umidade. Otimo para pecas expostas a agua ou ambientes externos.</p>
+          <ul>
+            <li>Resistente a umidade</li>
+            <li>Alta durabilidade</li>
+            <li>Semi-transparente</li>
+          </ul>
+        </div>
+        <div class="mat-card">
+          <span class="mat-badge">TPU</span>
+          <h3>TPU</h3>
+          <p>Material flexivel e borrachoso. Perfeito para capas, amortecedores e pecas que precisam dobrar.</p>
+          <ul>
+            <li>Flexivel</li>
+            <li>Absorve impactos</li>
+            <li>Alta durabilidade</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section class="section reveal" id="portfolio">
       <div class="section-head compact-center">
         <p class="eyebrow">Inspiracoes e aplicacoes</p>
@@ -96,6 +174,27 @@
         <img src="https://i.pinimg.com/736x/dd/73/b5/dd73b52ad0b1fb53bb2cae57786deafb.jpg" alt="Referencia 3D do Pinterest 5">
         <img src="https://i.pinimg.com/736x/77/82/f9/7782f910ca2d859b89ae74c581fe03cb.jpg" alt="Referencia 3D do Pinterest 6">
         <img src="https://i.pinimg.com/736x/ea/80/e9/ea80e91f7a035674204eea4738184180.jpg" alt="Referencia 3D do Pinterest 7">
+      </div>
+    </section>
+
+    <section class="section reveal" id="depoimentos">
+      <div class="section-head compact-center">
+        <p class="eyebrow">O que dizem nossos clientes</p>
+        <h2>Quem usou aprovou.</h2>
+      </div>
+      <div class="dep-grid">
+        <blockquote class="dep-card">
+          <p>"Encomendei pecas de reposicao e chegaram perfeitas, dentro do prazo combinado. Servico impecavel."</p>
+          <footer><strong>Carlos M.</strong><span>Sao Paulo, SP</span></footer>
+        </blockquote>
+        <blockquote class="dep-card">
+          <p>"Os chaveiros personalizados ficaram incriveis para distribuir na minha loja. Todos os clientes adoraram."</p>
+          <footer><strong>Ana P.</strong><span>Santo Andre, SP</span></footer>
+        </blockquote>
+        <blockquote class="dep-card">
+          <p>"Prototipagem rapida e acabamento excelente. Economizei muito tempo no desenvolvimento do produto."</p>
+          <footer><strong>Felipe R.</strong><span>Campinas, SP</span></footer>
+        </blockquote>
       </div>
     </section>
 
@@ -127,11 +226,59 @@
       </div>
     </section>
 
+    <section class="section reveal" id="faq">
+      <div class="section-head compact-center">
+        <p class="eyebrow">Duvidas frequentes</p>
+        <h2>Perguntas e respostas.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Quais formatos de arquivo voces aceitam?</summary>
+          <p>Aceitamos STL, OBJ, STEP e outros formatos 3D comuns. Se voce nao tem um arquivo, criamos o modelo a partir da sua ideia ou referencia.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Qual o prazo de entrega?</summary>
+          <p>Em media de 3 a 7 dias uteis dependendo da complexidade e quantidade. Pecas simples podem sair em 24h.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Fazem envio para todo o Brasil?</summary>
+          <p>Sim, enviamos para qualquer estado com rastreamento. Tambem ha opcao de retirada presencial em Sao Paulo.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Qual material devo escolher?</summary>
+          <p>PLA para decoracao e brindes, ABS/PETG para pecas tecnicas, TPU para itens flexiveis. Nossa equipe te orienta na melhor escolha.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Como solicito um orcamento?</summary>
+          <p>Preencha o formulario abaixo ou entre em contato pelo WhatsApp. Respondemos em ate 2 horas em dias uteis.</p>
+        </details>
+      </div>
+    </section>
+
     <section class="section cta reveal" id="contato">
       <p class="eyebrow">Faca seu orcamento agora</p>
       <h2>Sua ideia + nossa tecnologia = resultado real.</h2>
-      <p>Atendimento rapido no WhatsApp para orcamento, duvidas tecnicas e prazos de producao.</p>
-      <p><strong>WhatsApp: (11) 96453-2979</strong></p>
+      <p>Preencha abaixo e enviamos o orcamento direto no seu WhatsApp.</p>
+      <form class="quote-form" id="quoteForm" novalidate>
+        <div class="form-row">
+          <input type="text" id="quoteName" placeholder="Seu nome" required autocomplete="name">
+          <select id="quoteType">
+            <option value="">Tipo de peca</option>
+            <option>Chaveiro personalizado</option>
+            <option>Action figure</option>
+            <option>Peca de reposicao</option>
+            <option>Decoracao</option>
+            <option>Prototipo / maquete</option>
+            <option>Projeto sob medida</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <input type="number" id="quoteQty" placeholder="Quantidade" min="1">
+          <input type="text" id="quoteDeadline" placeholder="Prazo desejado (ex: 5 dias)">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar pelo WhatsApp</button>
+      </form>
     </section>
   </main>
 
@@ -139,6 +286,11 @@
     <p>RPPRINT3D - Impressao 3D profissional para empresas, criadores e uso pessoal.</p>
     <p>WhatsApp: (11) 96453-2979</p>
   </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">&#x2715;</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
 
   <a class="whatsapp-float" href="https://wa.me/5511964532979" target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp">
     <img src="cttwhatsapp" alt="WhatsApp">
