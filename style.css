@@ -2,7 +2,7 @@
   --bg: #080b14;
   --surface: #111625;
   --surface-2: #0c1325;
-  --text: #ecf1ff;
+  --text: #ff7a00;
   --muted: #9fb0d4;
   --brand: #1f6bff;
   --brand-2: #ff7a00;
@@ -72,9 +72,9 @@ body::before {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(8, 15, 28, 0.82);
+  background: rgb(255, 255, 255);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(36, 50, 77, 0.8);
+  border-bottom: 1px solid rgba(36, 50, 77, 0.8); 
   padding: 12px 6vw;
   display: flex;
   align-items: center;
